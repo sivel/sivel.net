@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	.center { text-align: center; font-size: 152px; cursor: pointer;}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$().ready(function(){
+    $(".center").css("position","absolute")
+    .css("top", ( $(window).height() - $(".center").height() ) / 2+$(window).scrollTop() + "px")
+    .css("left", ( $(window).width() - $(".center").width() ) / 2+$(window).scrollLeft() + "px");
+	$('.center').bind("click", function(){
+		$("#airhorn").trigger("play");
+	});
+});
+</script>
+</head>
+<body>
+	<audio id="airhorn" preload="auto" autobuffer>
+		<source src="airhorn.mp3" />
+		<source src="airhorn.ogg" />
+	</audio>
+	<div class="center">
+		AIRHORN
+	</div>
+</body>
+</html>

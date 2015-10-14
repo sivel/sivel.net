@@ -1,0 +1,37 @@
+            <div class="row-fluid">
+                <div class="offset2 span8">
+                    <hr />
+                    <footer>
+                        <div class="pull-right site-info">
+                            <a href="http://gohugo.io">Proudly powered by Hugo</a>
+                        </div>
+                        <p>&copy; Matt Martz</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script type="text/javascript" src="/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/google-code-prettify-1-Jun-2011/prettify.js"></script>
+        <script type="text/javascript" src="/bootstrap-extras/js/application.js"></script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', '{{ .Site.Params.googleAnalytics }}']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            var disqus_shortname = '{{ .Site.Params.disqus }}';
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = 'http://{{ .Site.Params.disqus }}.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            })();
+        </script>
+    </body>
+</html>

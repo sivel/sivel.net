@@ -1,0 +1,12 @@
+{{ $baseurl := .Site.BaseURL }}
+{{ partial "header.html" . }}
+            <div class="row-fluid">
+                <div class="offset2 span6">
+                    <h1>Oops, we couldn't find what you are looking for</h1>
+                    <p>Sorry, it looks like you were looking for something that does not exist.</p>
+                    <p>Feel free to try searching for what you were looking for</p>
+                </div>
+                {{ partial "sidebar.html" . }}
+                <div class="span2">&nbsp;</div>
+            </div>
+{{ partial "footer.html" . }}

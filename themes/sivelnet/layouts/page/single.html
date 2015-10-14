@@ -1,0 +1,15 @@
+{{ $baseurl := .Site.BaseURL }}
+{{ partial "header.html" . }}
+
+            <div class="row-fluid">
+                <div class="offset2 span8">
+                    <h3 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <div class="post-content">
+                        {{ .Content }}
+                    </div>
+                </div>
+                <div class="span2">&nbsp;</div>
+            </div>
+
+
+{{ partial "footer.html" . }}

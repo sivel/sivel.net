@@ -1,0 +1,15 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "Sivel.net"
+theme = "sivelnet"
+metaDataFormat = "yaml"
+paginate = 10
+
+[permalinks]
+  post = "/:year/:month/:title/"
+
+[params]
+  description = "Throwing Hot Coals"
+  DateFormat = "January 02, 2006"
+  googleAnalytics = "UA-3706980-1"
+  disqus = "sivel"

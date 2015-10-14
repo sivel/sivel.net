@@ -1,0 +1,12 @@
+            <div class="row-fluid navigation">
+                <div class="offset2 span8">
+                    <ul class="pager">
+                        <li class="previous{{ if not .HasNext }} disabled{{ end }}">
+                            <a href="{{ if .HasNext }}{{ .Next.URL }}{{ end }}">&larr; Older</a>
+                        </li>
+                        <li class="next{{ if not .HasPrev }} disabled{{ end }}">
+                            <a href="{{ if .HasPrev }}{{ .Prev.URL }}{{ end }}">Newer &rarr;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
