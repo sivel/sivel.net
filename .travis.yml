@@ -1,0 +1,13 @@
+language: python
+
+
+before_script:
+  - pip install -q awscli
+  - curl -sL https://github.com/spf13/hugo/releases/download/v0.14/hugo_0.14_linux_amd64.tar.gz | tar xzf -
+
+
+script:
+  - hugo_0.14_linux_amd64/hugo_0.14_linux_amd64
+  - aws configure set aws_access_key_id $AWS_ACCESS_ID
+  - aws configure set aws_secret_access_key $AWS_ACCESS_KEY
+  - aws s3 sync --delete --size-only --acl public-read public/ s3://sivel.net
