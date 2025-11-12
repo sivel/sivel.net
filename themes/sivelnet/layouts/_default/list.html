@@ -1,5 +1,5 @@
-{{ $paginator := .Paginator }}
 {{ $baseurl := .Site.BaseURL }}
+{{ $paginator := .Paginate (where site.RegularPages "Type" "post") }}
 {{ partial "header.html" . }}
             <div class="row-fluid">
                 <div class="offset2 span6">
