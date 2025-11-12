@@ -16,12 +16,9 @@
             <div class="row-fluid">
                 <div class="masthead offset2 span8">
                     <ul class="nav nav-pills pull-right">
-                        <li class="{{ if eq .Title .Site.Title }}active{{ end }}">
-                            <a href="/">Home</a>
-                        </li>
-                        {{ range where .Site.Pages "Type" "page" }}
-                        <li class="{{ if eq $.Title .Title }}active{{ end }}">
-                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        {{ range .Site.Menus.main }}
+                        <li class="{{ if $.IsMenuCurrent "main" . }}active{{ end }}">
+                            <a href="{{ .URL }}">{{ .Name }}</a>
                         </li>
                         {{ end }}
                     </ul>
