@@ -3,10 +3,17 @@ languageCode = "en-us"
 title = "Sivel.net"
 theme = "sivelnet"
 metaDataFormat = "yaml"
-paginate = 10
+
+[pagination]
+  pagerSize = 10
 
 [permalinks]
   post = "/:year/:month/:title/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [params]
   description = "Throwing Hot Coals"
